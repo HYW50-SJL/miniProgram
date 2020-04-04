@@ -1,0 +1,20 @@
+<!--pages/scroll-view/scroll-view.wxml-->
+<view>pages/scroll-view/scroll-view.wxml</view>
+
+<!-- scroll-x水平滚动，默认为false -->
+<scroll-view class="container1" scroll-x>
+  <view wx:for="{{10}}" class="item1">{{item}}</view>
+</scroll-view>
+
+--------------分割线-----------------
+<!-- scroll-y垂直滚动，默认为false -->
+<scroll-view class="container2" scroll-y>
+  <view wx:for="{{10}}" class="item2">{{item}}</view>
+</scroll-view>
+
+--------------分割线-----------------
+<!-- bindscroll获取滚动的信息，bindscrolltoupper：滚动最顶部或最左边时触发，
+bindscrolltobottom：滚动最底部或最右边边时触发 -->
+<scroll-view class="container3" scroll-y bindscroll="handleScroll">
+  <view wx:for="{{10}}" class="item3">{{item}}</view>
+</scroll-view>

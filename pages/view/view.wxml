@@ -1,0 +1,19 @@
+<!--pages/view/view.wxml-->
+<view>视图容器之view</view>
+
+<!-- 1. 基本使用 -->
+<view>you are cruel</view>
+<view>
+  <text>text</text>
+</view>
+
+<!-- hover-class -->
+<!-- hover-start-time:按住多久才出现点击样式
+  hover-stay-time:设置松开点击时样式的延迟时间 
+  hover-stop-propagation:是否组织冒泡
+-->
+<view class="box-p" hover-class="box-p-hover">
+  <view class="box" hover-class="box-hover" hover-stay-time="{{0}}"
+    hover-stop-propagation="{{true}}"
+  >hover-class</view>
+</view>

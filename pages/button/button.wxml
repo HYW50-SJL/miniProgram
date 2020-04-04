@@ -1,0 +1,38 @@
+<!--pages/button/button.wxml-->
+<!-- button组件的演示，文档位置：组件--表单组件--button -->
+<text>pages/button/button.wxml</text>
+
+<!-- 1.默认块级元素 -->
+<button>默认按钮</button>
+
+<!-- 2.size：mini 变为行内元素性质-->
+<button size="mini">mini按钮</button>
+<button size="mini">mini按钮</button>
+
+<!-- 3.type属性 -->
+<button size="mini" type="primary">primary</button>
+<button size="mini" type="warn">warn</button>
+<button size="mini" type="default">default</button>
+
+<!-- 4.plain：镂空，无背景颜色 -->
+<button size="mini" plain>镂空</button>
+
+<!-- 5. -->
+<button size="mini" disabled>禁用</button>
+
+<!-- 6. -->
+<button size="mini" loading>loading</button>
+
+<!-- 7.小程序不允许DOM操作 
+  hover-class的值时一个类型，设置用户点击按钮时的样式
+-->
+<button hover-class="pressed">按钮</button>
+
+<!-- 8.form-type -->
+<button form-type="submit">submit</button>
+<button form-type="reset">reset</button>
+
+<!-- 9.open-type -->
+<!-- <button open-type="getUserInfo" bindgetuserinfo="handleBtnClick">获取用户信息btn</button> -->
+
+

@@ -1,0 +1,21 @@
+/* pages/view/view.wxss */
+.box{
+  background-color: salmon;
+  color: white;
+  height: 50px;
+  width: 100px;
+}
+.box-hover{
+  background-color: orange;
+  color: white;
+ 
+}
+.box-p{
+  width: 150px;
+  height: 100px;
+  background-color: blue;
+}
+
+.box-p-hover{
+  background-color: red;
+}

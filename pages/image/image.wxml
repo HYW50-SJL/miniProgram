@@ -1,0 +1,39 @@
+<!--pages/image/image.wxml-->
+<!-- image组件演示 -->
+
+<!-- 1.单标签写法时必须以“/”结束,默认大小:320x240 -->
+<!-- <image></image> -->
+<!-- <image/> -->
+
+<!-- 2.src属性 -->
+<image src="../../assets/tabbar/home.png"/>
+<image src="/assets/tabbar/home_active.png"/>
+<!-- <image src="https://avatars2.githubusercontent.com/u/55727208?s=400&u=25a8be32890dd9ce7248e3045b5b261877f213a1&v=4"/> -->
+
+<!-- 3.用户从手机相册或拍照上传并显示图片 -->
+<button bindtap="handleChoosePic">从相册上传图片</button>
+<image src="{{picPath}}"/>
+
+<!--4. 图片懒加载lazy-load :默认为false;bindload：图片加载完成后执行对应函数-->
+<!-- 在一定范围内加载 -->
+<!-- <image wx:for="{{1}}" src="https://avatars2.githubusercontent.com/u/55727208?s=400&u=25a8be32890dd9ce7248e3045b5b261877f213a1&v=4"
+  bindload="handleImageLoaded" lazy-load
+/> -->
+
+<!-- 5. show-menu-by-longpress:长按图片出现识别小程序码功能 -->
+<image show-menu-by-longpress src="../../assets/tabbar/05.jpg"/>
+
+<!-- mode:图片的显示模式（剪裁或缩放的样式）-->
+<!-- 缩放模式 -->
+<!-- 图片完全自适应，默认 -->
+<image mode="scaleToFill" src="../../assets/tabbar/05.jpg"/> <!--  -->
+<!-- 只保证图片的短边会显示，另一方向会被截取，只即有水平或垂直方向上显示完整 -->
+<image mode="aspectFill" src="../../assets/tabbar/05.jpg"/>
+<!-- 只保证图片的长边会显示，可以完整显示图片 --> 
+<image mode="aspectFit" src="../../assets/tabbar/05.jpg"/> 
+<!-- 宽度不变，高度自适应 -->
+<image mode="widthFix" src="../../assets/tabbar/05.jpg"/>
+
+<!-- 剪裁模式 -->
+<image mode="top" src="../../assets/tabbar/05.jpg"/>
+<image mode="top left" src="../../assets/tabbar/05.jpg"/>

@@ -1,5 +1,10 @@
 {
   "pages": [
+    "pages/scroll-view/scroll-view",
+    "pages/input/input",
+    "pages/image/image",
+    "pages/view/view",
+    "pages/button/button",
     "pages/home/home",
     "pages/about/about",
     "pages/category/category",

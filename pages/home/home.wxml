@@ -1,19 +1,21 @@
-<!--
-  <text class="title">Home</text>
-  <button size="mini">按钮</button> 
+<text>Home\n</text>
+
+<!-- text用于显示文本，是行内元素 -->
+<text>Hello World\n</text>
+
+<!-- selectable:用户是否可以选中文字，默认为false -->
+<!--写法一： <text selectable="{{true}}">HELLO\n</text> -->
+<text selectable>HELLO\n</text>
+
+<!-- space:设置文本之间的空格距离，默认nbsp 
+  ensp:半个中文字符大小；
+  emdp：一个中文字符大小（3字节）；
 -->
-<!-- 绑定数据 -->
-<view class="title">Home,{{name}}</view>
-<view>年龄：{{age + 1}}</view>
+<text>HELLO World HI\n</text>
+<text space="nbsp">HELLO World HI\n</text>
+<text space="ensp">HELLO World HI\n</text>
+<text space="emsp">HELLO World HI\n</text>
 
-<!-- <view>{{students[0]}}</view>  -->
-<!-- wx:for，内部会生成一个item，它是被遍历的对象里的元素 -->
-<!-- vue写法：<div v-for="item in students">{{item.name}}{{item.gender}}</div> -->
-<!-- <view wx:for="{{students}}" wx:key="{{item.id}}">{{item.name}}-{{item.gender}}</view> -->
-
-
-<!-- 事件监听 -->
-<view>当前计数：{{count}}</view>
-<button size="mini" bindtap="btnAdd">+</button>
-<button size="mini" bindtap="btnSub">-</button>
-
+<!-- decode解码，m默认为false -->
+ <text>H&nbsp;E\n</text> <!--直接显示H&nbsp;E -->
+<text decode>H&nbsp;E</text>

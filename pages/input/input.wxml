@@ -1,0 +1,22 @@
+<!--pages/input/input.wxml-->
+<!-- 不设置样式时在页面上看不到输入框 -->
+
+<!-- 1.value：默认值 -->
+<input value="probe调查"/>
+
+<!-- 2.type：输入时弹出的键盘的类型，文本/数字/身份证 -->
+<input type="number"/>
+<input type="digit"/>
+
+<!-- 3.password:默认为false -->
+<input password/>
+
+<input auto-focus placeholder="请输入。。。" maxlength="10"/>
+
+<!-- 4.confirm-type:用户的键盘右下角那个按钮显示发送/搜索/确认/下一个/前往/完成 -->
+<input confirm-type="send"/>
+
+<!-- 监听事件 -->
+<input bindinput="handleInput" 
+       bindfocus="handleFocus"
+       bindblur="handleBlur"/>
