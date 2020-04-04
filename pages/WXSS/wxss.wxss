@@ -1,0 +1,25 @@
+/* pages/WXSS/wxss.wxss */
+/* 2.导入样式--当一个文件的样式较多时可以抽取出来放到另一个文件，然后导入 */
+@import './style/style.wxss';
+
+/* 3.样式库weUI */
+@import './style/weui-searchabr.wxss';
+
+/* 1.尺寸单位rpx:responsive pixel,会根据屏幕宽度适配，在iPhone 6上1px=2rpx */
+/* ihone 6 plus: 1px = 1.81rpx，1rpx = 0.42px;
+   iPhone 5： 1px = 2.34rpx，1rpx = o.55p2x   
+   一般以iPhone 6位标准设置*/
+/*  */
+.box1{
+  width: 100px;
+  height: 100px;
+  background-color: palegreen;
+  font-size: 32px;
+}
+.box2{
+  width: 200rpx;
+  height: 200rpx;
+  background-color: blue;
+  font-size: 64rpx;
+}
+

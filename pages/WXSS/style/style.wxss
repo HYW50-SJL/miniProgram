@@ -1,0 +1,4 @@
+.content{
+  color: tomato;
+  font-size: 32rpx;
+}
