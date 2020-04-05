@@ -1,0 +1,28 @@
+<!--pages/wxs/wxs.wxml-->
+<view>pages/wxs/wxs.wxml</view>
+
+<!-- 1、在wxml试用贴wxs -->
+<wxs module="foo">  
+  // 方法一：单行注释
+  /*
+  方法二：多行注释
+  */
+   //方法三：结尾注释。即从 "/*" 开始往后的所有 WXS 代码均被注释
+
+  var some_msg = 'hello world';
+  module.exports = {
+    msg : some_msg
+  }
+</wxs>
+
+<!-- 2、导入外部wxs文件,只能使用相对路径 -->
+<!-- module 属性是当前 <wxs> 标签的模块名 -->
+<wxs src="./wxsModule/wxs.wxs" module="foo"></wxs>
+<view> {{foo.msg}} </view>
+<view> {{foo.fn()}} </view>
+<view> {{foo.handleToFixed(1.23445,2)}} </view>
+
+<!-- 3、在wxml中或js中使用toFixed()会报错 -->
+<!-- <view>{{2.5678.toFixed(2)}}</view> -->
+<!-- <button bindtap="handleToFixed">btn</button>
+<view>{{num}}</view> -->

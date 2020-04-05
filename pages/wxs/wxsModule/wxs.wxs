@@ -1,0 +1,15 @@
+var loginMsg = require('./login.wxs');
+var some_msg = 'hello world';
+var fn = function(){
+  console.log("我是wxs里的函数");
+  console.log(loginMsg.msg);
+}
+var handleToFixed = function(price,num){
+  var price = price || 2;
+  return parseFloat(price).toFixed(num)
+}
+module.exports = {
+  msg: some_msg,
+  fn: fn,
+  handleToFixed: handleToFixed
+}

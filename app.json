@@ -1,9 +1,11 @@
 {
   "pages": [
+    "pages/wxs/wxs",
     "pages/home/home",
     "pages/about/about",
     "pages/category/category",
     "pages/profile/profile"
+    
   ],
   "window": {
     "navigationBarBackgroundColor": "#1296db",
@@ -35,5 +37,6 @@
         "selectedIconPath": "assets/tabbar/profile_active.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
