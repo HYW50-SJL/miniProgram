@@ -1,0 +1,81 @@
+<!--pages/WXML/WXML.wxml-->
+<view class="divide">---------1.mustache语法补充---------</view>
+<view>{{msg}}</view>
+<view>{{firstname}} {{lastname}}</view>
+<view>{{firstname + ' ' + lastname}}</view>
+<view>{{age > 18? '成年人':'未成年人'}}</view>
+<button size="mini"  bindtap="handleChange">切换颜色</button>
+<view class="box {{ isActive ? 'active': ''}}">二月二</view>
+<!-- active记得写引号，不然会很惨 -->
+
+<view class="divide">---------2.条件判断wx:if---------</view>
+<button bindtap="handleIsShow">wx:if显示或隐藏</button>
+<view wx:if="{{isShow}}">wx:if控制</view>
+
+<button size="mini" bindtap="handleAddScore">score+6</button>
+<view>{{score}}</view>
+<view wx:if="{{score >= 90}}">优秀</view>
+<view wx:elif="{{score >= 80}}">良好</view>
+<view wx:elif="{{score >= 60}}">及格</view>
+<view wx:else>不及格</view>
+
+<view class="divide">-----3.hidden属性，值为true时隐藏-----</view>
+<view hidden="{{true}}">hidden控制</view>
+<!-- hidden与wx:if的区别，hidden为true时只是添加了display：none属性，
+ 可wx:if隐藏时不会渲染组件（连标签都没有）
+ 显示和隐藏切换频率很高时选择hidden，否则选择wx:if
+ -->
+
+
+<view class="divide">-----4.wx:for列表渲染-----</view>
+<view wx:for="{{5}}">{{index}}-{{item}}</view>
+<view wx:for="{{['白','敬','亭']}}">{{index}}-{{item}}</view>
+<view wx:for="BJT">{{item}}</view>
+<!-- 属性里使用mustache语法时记得加引号，不然会很惨 -->
+
+<!-- 命名不允许有“-”，可以有下划线 -->
+<view class="divide">-----5.wx:for中的item与index起名字-----</view>
+<view wx:for="{{['白白','敬敬','亭亭']}}" 
+      wx:for-item="content"
+      wx:for-index="i">{{i}}-{{content}}</view>
+
+<view class="divide">---6.wx:for，key的作用（复用DOM、diff）---</view>
+
+<view class="divide">-----7.block标签，包裹一组组件标签-----</view>
+<!-- 用view包裹，对这个view组件的创建与渲染会影响性能 -->
+<view wx:if="{{true}}">
+  <view>view包裹</view>
+  <text>嘿哈嘿哈</text>
+  <view>哈哈哈哈</view>
+</view>
+
+<!-- 用block包裹，block不是组件，所以不会被创建与渲染，性能更高；
+    可以接收像wx:if这样的控制属性，无法接收class等属性 -->
+<block wx:if="{{true}}">
+  <view></view>
+  <text>嘿哈嘿哈</text>
+  <view>哈哈哈哈</view>
+</block>
+
+<!-- 以前的小程序不支持自定义组件，template是为了提高代码的复用性 -->
+<view class="divide">-----8.template-----</view>
+<template name="temp1">
+  <!-- 这里只是定义模板 -->
+  <button size="mini">传参：{{btnText}}</button>
+  <view>{{text}}</view>
+  <view>hahahh</view>
+</template>
+<!-- 使用模板 -->
+<template is="temp1" data="{{btnText:'按钮',text: '哎哟喂'}}"/>
+<template is="temp1" data="{{btnText:'点击',text: '你好'}}"/>
+
+<!-- WXML的导入import、include -->
+<import src="../commonWXML/template.wxml"/>
+<template is="temp2" data="{{btnText:'帮助',text: '呵呵呵'}}"/>
+
+<!-- include不能导入模板和wxs -->
+<!-- <include src="../commonWXML/template.wxml"/> -->
+<!-- <template is="temp3"/> -->
+
+<include src="../commonWXML/include.wxml"/>
+

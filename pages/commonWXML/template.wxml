@@ -1,0 +1,11 @@
+<!-- <import src="./template2.wxml"/> -->
+<!-- <include src="./template2.wxml"/> -->
+<!-- 不可以嵌套导入模板 -->
+
+<template name="temp2">
+  <!-- 这里只是定义模板 -->
+  <button size="mini">template导入：{{btnText}}</button>
+  <view>{{text}}</view>
+  <view>hahahh</view>
+</template>
+<!-- <template is="temp3"/> -->

@@ -1,0 +1,10 @@
+/* pages/WXML/WXML.wxss */
+.box{
+  font-size: 64rpx;
+}
+.active{
+  color: red;
+}
+.divide{
+  color: red;
+}
