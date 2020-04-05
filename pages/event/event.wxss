@@ -1,0 +1,25 @@
+/* pages/event/event.wxss */
+.box{
+  font-size: 64rpx;
+  width: 200rpx;
+  height: 200rpx;
+  background-color: palegreen;
+}
+.divide{
+  color: red;
+}
+.box1{
+  width: 600rpx;
+  height: 600rpx;
+  background-color: red;
+}
+.box2{
+  width: 400rpx;
+  height: 400rpx;
+  background-color: palegreen;
+}
+.box3{
+  width: 200rpx;
+  height: 200rpx;
+  background-color: palevioletred;
+}

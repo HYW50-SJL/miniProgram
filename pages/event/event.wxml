@@ -1,0 +1,33 @@
+<!--pages/event/event.wxml-->
+<text>pages/event/event.wxml</text>
+
+<view class="box"
+      bindtap="handleTap"
+      bindtouchstart="handleTouchStart"
+      bindtouchmove="handleTouchMove"
+      bindtouchend="handleTouchEnd"
+      bindlongpress="bindLongPress">Click me</view>
+
+<view class="divide">------分割线：1.事件对象及其属性------</view>
+<button bindtap="handleBtnClick">事件对象</button>
+
+<view class="divide">------分割线：2.事件参数的传递------</view>
+<!-- 用data-*传递参数 -->
+<view wx:for="{{fruits}}" wx:key="{{index}}">
+  <text    
+      data-index="{{index}}"
+      data-item="{{item}}"
+      bindtap="handleFruits"
+      >{{item}}</text>
+</view>
+
+<!-- captch:阻止传递，bind：不会阻止传递 -->
+<view class="box1" capture-bind:tap="handleCapBox1" bindtap="handleBox1">
+box1
+  <view  class="box2" capture-catch:tap="handleCapBox2"   catchtap="handleBox2">
+  box2
+    <view class="box3" capture-bind:tap="handleCapBox3" bindtap="handleBox3">
+      box3
+    </view>
+  </view>
+</view>
