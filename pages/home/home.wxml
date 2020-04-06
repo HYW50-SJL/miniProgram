@@ -1,19 +1,38 @@
-<!--
-  <text class="title">Home</text>
-  <button size="mini">按钮</button> 
--->
-<!-- 绑定数据 -->
-<view class="title">Home,{{name}}</view>
-<view>年龄：{{age + 1}}</view>
+<!-- 1.自定义组件的使用 -->
+<!-- <my-cpn/>
+<my-cpn></my-cpn> -->
 
-<!-- <view>{{students[0]}}</view>  -->
-<!-- wx:for，内部会生成一个item，它是被遍历的对象里的元素 -->
-<!-- vue写法：<div v-for="item in students">{{item.name}}{{item.gender}}</div> -->
-<!-- <view wx:for="{{students}}" wx:key="{{item.id}}">{{item.name}}-{{item.gender}}</view> -->
+<!-- 2.自定义组件样式与页面样式互不影响 -->
+<!-- <view class="title">home的title1</view>
+<my-style/>
+<view class="title">home的title2</view> -->
 
+<!-- 3.自定义组价与页面的通信，页面向组件传递数据和样式 -->
+<!-- <my-prop title="我是标题1" titleclass="redclass"/>
+<my-prop title="我是标题2" titleclass="blueclass"/>
+<my-prop/> -->
 
-<!-- 事件监听 -->
-<view>当前计数：{{count}}</view>
-<button size="mini" bindtap="btnAdd">+</button>
-<button size="mini" bindtap="btnSub">-</button>
+<!-- 4. 向页面传递事件 -->
+<!-- <view>{{counter}}</view>
+<my-event bind:triEvent="pageHandle"/> -->
 
+<!-- 5.tab-control练习 -->
+<!-- <tab-control titles="{{['精选','流行','哈哈']}}" bind:tabClick="handleTabClick"/> -->
+
+<!-- 6.通过页面修改组件数据或调用组件方法 -->
+<!-- <button bindtap="handleChangeMySelData">修改my-sel组件的数据</button>
+<my-sel id="mySel_id"/> -->
+
+<!-- 7.插槽的使用 -->
+<!-- 7.1 单个插槽 -->
+<my-slot>
+  <!-- 不管有多少个容器都放到一个slot插槽里面 -->
+  <view>hi嗯好IE</view>
+  <view>hi嗯好</view>
+</my-slot>
+
+<!-- 7.2 多个个插槽,给每个插槽起名字，还要在Component对对象中设置options字段，添加multipleSlots: true -->
+<my-slot>
+  <view slot="slot1">slot1</view>
+  <button slot="slot2">slot2</button>
+</my-slot>

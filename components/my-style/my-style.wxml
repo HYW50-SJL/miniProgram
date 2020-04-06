@@ -1,0 +1,4 @@
+<!--components/my-style/my-style.wxml-->
+<view class="title">{{title}}</view>
+<text>my-style组件的文本</text>
+

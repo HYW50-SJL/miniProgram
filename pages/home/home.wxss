@@ -1,4 +1,13 @@
 /* pages/home/home.wxss */
-.title{
+/* .title{
+  color: blueviolet;
+} */
+/* text{
+  background-color: chartreuse;
+} */
+.redclass{
   color: red;
+}
+.blueclass{
+  color: blue
 }

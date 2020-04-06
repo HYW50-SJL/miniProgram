@@ -3,7 +3,8 @@
     "pages/home/home",
     "pages/about/about",
     "pages/category/category",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "components/my-cpn/my-cpn"
   ],
   "window": {
     "navigationBarBackgroundColor": "#1296db",

@@ -1,0 +1,2 @@
+<!-- 4.向页面传递事件 -->
+<button bindtap="handleIncrement">点击按钮使页面数据变化</button>

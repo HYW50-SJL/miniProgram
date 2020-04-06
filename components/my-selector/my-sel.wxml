@@ -1,0 +1,2 @@
+<!--components/my-selector/my-sel.wxml-->
+<view>我是my-sel组件的内容：{{num}}</view>

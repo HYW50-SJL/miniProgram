@@ -1,0 +1,15 @@
+<!--components/my-slot/my-slot.wxml-->
+<!-- 7.1 单个插槽 -->
+<view>my-slot组件开始</view>
+<slot/>
+<view>my-slot组件结束</view>
+
+<!-- 7.2 多个个插槽 -->
+<view>my-slot组件开始</view>
+<view class="slot1">
+  <slot name="slot1"/>
+</view>
+<view class="slot2">
+  <slot name="slot2"/>
+</view>
+<view>my-slot组件结束</view>
