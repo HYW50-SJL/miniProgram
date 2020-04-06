@@ -1,19 +1,14 @@
-<!--
-  <text class="title">Home</text>
-  <button size="mini">按钮</button> 
--->
-<!-- 绑定数据 -->
-<view class="title">Home,{{name}}</view>
-<view>年龄：{{age + 1}}</view>
+<!-- 1.wx.showToast()：弹窗在一定时间内自动消失 -->
+<button size="mini" bindtap="handleShowToast">点击弹窗showToast</button>
 
-<!-- <view>{{students[0]}}</view>  -->
-<!-- wx:for，内部会生成一个item，它是被遍历的对象里的元素 -->
-<!-- vue写法：<div v-for="item in students">{{item.name}}{{item.gender}}</div> -->
-<!-- <view wx:for="{{students}}" wx:key="{{item.id}}">{{item.name}}-{{item.gender}}</view> -->
+<!-- 2.wx.showModal()模态弹窗：点击确定或取消时消失-->
+<button size="mini" bindtap="handleShowModal">showModal</button>
 
+<!-- 3.wx.showLoading()：弹窗不会自动消失-->
+<button size="mini" bindtap="handleShowLoading">showLoading</button>
 
-<!-- 事件监听 -->
-<view>当前计数：{{count}}</view>
-<button size="mini" bindtap="btnAdd">+</button>
-<button size="mini" bindtap="btnSub">-</button>
+<!-- 4.wx.showActionSheet()：显示操作菜单,在底部弹出，上面三个都是在中间弹出-->
+<button size="mini" bindtap="handleShowActionSheet">showActionSheet</button>
 
+<!-- 5.分享小程序按钮 -->
+<button open-type="share">分享小程序</button>
