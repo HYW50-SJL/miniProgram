@@ -1,3 +1,4 @@
 <!--pages/profile/profile.wxml-->
-<text>pages/profile/profile.wxml</text>
+<text>profile</text>
+<navigator open-type="navigateback">跳到关于页面navigateback</navigator>
 

@@ -1,3 +1,9 @@
 <!--pages/about/about.wxml-->
 <text class="title">about</text>
 
+<!--  delta="1":返回上一页， delta="2"：返回上上页 -->
+<navigator open-type="navigateBack" delta="1">navigateback</navigator>
+
+<button bindtap="handleNavigateBack">Back</button>
+
+

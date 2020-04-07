@@ -1,19 +1,30 @@
-<!--
-  <text class="title">Home</text>
-  <button size="mini">按钮</button> 
--->
-<!-- 绑定数据 -->
-<view class="title">Home,{{name}}</view>
-<view>年龄：{{age + 1}}</view>
+<!-- 1. 使用navigator组件实现页面跳转 --> 
+<view class="divide"> ------1. 使用navigator组件实现页面跳转----</view>
+<!-- open-type默认值：navigate，页面左上角会有返回按钮 -->
+<navigator url="/pages/about/about" open-type="navigate">跳到关于页面</navigator>
+<navigator url="/pages/about/about" redirct>在当前页打开</navigator>
 
-<!-- <view>{{students[0]}}</view>  -->
-<!-- wx:for，内部会生成一个item，它是被遍历的对象里的元素 -->
-<!-- vue写法：<div v-for="item in students">{{item.name}}{{item.gender}}</div> -->
-<!-- <view wx:for="{{students}}" wx:key="{{item.id}}">{{item.name}}-{{item.gender}}</view> -->
+<!-- redirect：关闭当前页面，跳转到应用内某个页面，不允许跳转到tabbar页面，没有返回按钮（也不可以用navigateBack返回 -->
+<navigator url="/pages/about/about" open-type="redirect">跳到关于页面redirect</navigator>
 
+<!-- reLaunch：关闭所有页面，可以跳转到某个tabbar页面,没有返回按钮（也不可以用navigateBack返回 -->
+<navigator url="/pages/about/about" open-type="reLaunch">跳到关于页面reLaunch</navigator>
 
-<!-- 事件监听 -->
-<view>当前计数：{{count}}</view>
-<button size="mini" bindtap="btnAdd">+</button>
-<button size="mini" bindtap="btnSub">-</button>
+<!-- switch：跳转到tabbar页面，关闭其他非tabbar页面 -->
+<navigator url="/pages/profile/profile" open-type="switchTab">跳到我的页面switchTab</navigator>
 
+<!-- <navigator url="/pages/about/about" open-type="navigateback">跳到关于页面navigateback</navigator> -->
+
+<!-- hover-start-time：按住多久后出现点击态，hover-stay-time：松开手指时点击保留的世间 -->
+<navigator url="/pages/about/about" hover-class="navigate-hover">hover-class：设置点击时的样式类名</navigator>
+
+<!-- 2.传递数据到about页面 -->
+<view class="divide"> ---- 2.传递数据到about页面------------</view>
+<navigator url="/pages/about/about?name=Coco&age=19">传递数据</navigator>
+
+<view>{{name}}</view>
+
+<!-- 3.使用API实现页面跳转 -->
+<view class="divide"> ---3.使用API实现页面跳转------------</view>
+<button size="mini" bind:tap="handleRedirectTo">RedirectTo</button>
+<button size="mini" bind:tap="handleNavigateTo">NavigateTo</button>
